@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		11234E931F09E4AC004D5402 /* Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11234E921F09E4AC004D5402 /* Topics.swift */; };
+		11234E951F0A17E8004D5402 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11234E941F0A17E8004D5402 /* BaseViewController.swift */; };
+		11234E971F0A1D88004D5402 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11234E961F0A1D88004D5402 /* BaseNavigationController.swift */; };
+		11234E991F0A1F90004D5402 /* TopicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11234E981F0A1F90004D5402 /* TopicDetailViewController.swift */; };
+		11234E9B1F0A246C004D5402 /* DispatchTime+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11234E9A1F0A246C004D5402 /* DispatchTime+Extensions.swift */; };
 		1142FA431EEFC04C008634E0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1142FA421EEFC04C008634E0 /* MainViewController.swift */; };
 		119E064E1EF0CA0800F6AF8C /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E064D1EF0CA0800F6AF8C /* MenuView.swift */; };
 		119E06501EF0DED300F6AF8C /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119E064F1EF0DED300F6AF8C /* ScanViewController.swift */; };
@@ -64,6 +68,10 @@
 
 /* Begin PBXFileReference section */
 		11234E921F09E4AC004D5402 /* Topics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topics.swift; sourceTree = "<group>"; };
+		11234E941F0A17E8004D5402 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		11234E961F0A1D88004D5402 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		11234E981F0A1F90004D5402 /* TopicDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDetailViewController.swift; sourceTree = "<group>"; };
+		11234E9A1F0A246C004D5402 /* DispatchTime+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchTime+Extensions.swift"; sourceTree = "<group>"; };
 		1142FA421EEFC04C008634E0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		119E064D1EF0CA0800F6AF8C /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		119E064F1EF0DED300F6AF8C /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +159,9 @@
 				11D6D7FF1EEFE61E000E2A3C /* view */,
 				11C5C2E01EFBAF62008037CB /* Models */,
 				1142FA421EEFC04C008634E0 /* MainViewController.swift */,
+				11234E941F0A17E8004D5402 /* BaseViewController.swift */,
+				11234E961F0A1D88004D5402 /* BaseNavigationController.swift */,
+				11234E981F0A1F90004D5402 /* TopicDetailViewController.swift */,
 				119E064F1EF0DED300F6AF8C /* ScanViewController.swift */,
 				11C5C2E31EFBBE31008037CB /* ScannerBackgroundView.swift */,
 			);
@@ -191,6 +202,7 @@
 				11C5C2AE1EFBAE8B008037CB /* UIColor+Extensions.swift */,
 				11C5C2AF1EFBAE8B008037CB /* UIScreen+Extensions.swift */,
 				11C5C2B01EFBAE8B008037CB /* UIViewController+Extensions.swift */,
+				11234E9A1F0A246C004D5402 /* DispatchTime+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -545,11 +557,13 @@
 				11C5C2E21EFBAF75008037CB /* User.swift in Sources */,
 				11C5C2CD1EFBAE8B008037CB /* NSObject+Extensions.swift in Sources */,
 				11CDEFA51EEF8ED600DA0F8D /* AppDelegate.swift in Sources */,
+				11234E991F0A1F90004D5402 /* TopicDetailViewController.swift in Sources */,
 				119E06501EF0DED300F6AF8C /* ScanViewController.swift in Sources */,
 				11C5C2CB1EFBAE8B008037CB /* ApiString.swift in Sources */,
 				11C5C2D81EFBAE8B008037CB /* NSString+Base64.m in Sources */,
 				11D6D8011EEFE642000E2A3C /* ProfileHeaderView.swift in Sources */,
 				11C5C2D71EFBAE8B008037CB /* NSData+CommonCrypto.m in Sources */,
+				11234E971F0A1D88004D5402 /* BaseNavigationController.swift in Sources */,
 				11C5C2CA1EFBAE8B008037CB /* NSUserDefaults+Extension.m in Sources */,
 				11C5C2DD1EFBAE8B008037CB /* UserTool.swift in Sources */,
 				119E064E1EF0CA0800F6AF8C /* MenuView.swift in Sources */,
@@ -558,6 +572,7 @@
 				1142FA431EEFC04C008634E0 /* MainViewController.swift in Sources */,
 				11C5C2D11EFBAE8B008037CB /* UIScreen+Extensions.swift in Sources */,
 				11FCF29B1F09D0B500C85AF6 /* HomeTableViewCell.swift in Sources */,
+				11234E9B1F0A246C004D5402 /* DispatchTime+Extensions.swift in Sources */,
 				11C5C2D41EFBAE8B008037CB /* GlobeConst.swift in Sources */,
 				11C5C2DC1EFBAE8B008037CB /* HttpTool.swift in Sources */,
 				11C5C2E41EFBBE31008037CB /* ScannerBackgroundView.swift in Sources */,
@@ -570,6 +585,7 @@
 				11C5C2CF1EFBAE8B008037CB /* UIButton+Extensions.swift in Sources */,
 				11C5C2CC1EFBAE8B008037CB /* Bundle+Extensions.swift in Sources */,
 				11C5C2D61EFBAE8B008037CB /* NSData+Base64.m in Sources */,
+				11234E951F0A17E8004D5402 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
