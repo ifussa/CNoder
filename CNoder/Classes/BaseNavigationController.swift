@@ -21,10 +21,10 @@ class BaseNavigationController: UINavigationController {
         if childViewControllers.count > 0 {
             viewController.hidesBottomBarWhenPushed = true
             if let vc = viewController as? BaseViewController {
-                var title = "返回"
-                if childViewControllers.count == 1 {
-                    title = childViewControllers.first? .title ?? "返回"
-                }
+                let title = "返回"
+//                if childViewControllers.count == 1 {
+//                    title = childViewControllers.first? .title ?? "返回"
+//                }
                 vc.fs_navigationItem.leftBarButtonItem = UIBarButtonItem(title: title, target: self, action: #selector(popToParent), isBack: true)
             }
         }

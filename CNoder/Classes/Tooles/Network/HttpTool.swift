@@ -30,7 +30,7 @@ class HttpTool: NSObject {
         Alamofire.request(appendBaseUrl(url),
                           method: .get,
                           parameters: params,
-                          encoding: JSONEncoding.default,
+                          encoding: URLEncoding.queryString,
                           headers: nil).responseJSON{ (response) in
 //                            printLog("response:\(response)")
             doWithResponse(response, success, failture)

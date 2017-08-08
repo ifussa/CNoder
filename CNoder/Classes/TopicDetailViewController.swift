@@ -9,27 +9,46 @@
 import UIKit
 
 class TopicDetailViewController: BaseViewController {
-
+    var topicId: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.loadTopicInfo()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+// MARK: - 界面相关
+extension TopicDetailViewController {
+    override func setupUI() {
+        super.setupUI()
+//        self.setupNavigationBar()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func setupNavigationBar() {
+        fs_navigationItem.title = "详情"
+        fs_navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", target: self, action:  #selector(back))
     }
-    */
+}
 
+// MARK: - 逻辑处理
+extension TopicDetailViewController {
+    @objc fileprivate func back() {
+        self.navigationController?.popViewController(animated: true)
+    }
+}
+
+
+// MARK: - 网络
+extension TopicDetailViewController {
+    func loadTopicInfo() {
+        if let id = self.topicId {
+            let dict: [String : AnyObject] = ["mdrender" : "false" as AnyObject]
+            let url = TOPICS_INFO_URL + id
+            HttpTool.getRequset(url: url, params: dict, success: { (success) in
+                printLog(success)
+            }, failture: { (error) in
+                self.showSingerAlert(String(describing: error))
+            })
+        }
+    }
 }

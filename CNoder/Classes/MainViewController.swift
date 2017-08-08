@@ -22,6 +22,7 @@ class MainViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "首页"
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -82,7 +83,7 @@ extension MainViewController {
 }
 
 // MARK: - 网络请求
-fileprivate extension MainViewController {
+extension MainViewController {
     func getTopics() {
         HttpTool.getRequset(url: TOPICS_URL, params: nil , success: { (success) in
             let topics = success["data"] as? NSArray
@@ -153,6 +154,8 @@ extension MainViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detail = TopicDetailViewController()
+        let topic: Topics = self.topicsData[indexPath.row]
+        detail.topicId = topic.id
         self.navigationController?.pushViewController(detail, animated: true)
     }
 }
